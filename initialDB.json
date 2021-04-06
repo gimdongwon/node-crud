@@ -1,20 +1,20 @@
 [
     {
-        "movidId": 1,
+        "movieId": 1,
         "title": "Avergers",
         "director": "Lusoo Brothers",
         "year": 2019,
         "reviews":[]
     },
     {
-        "movidId": 2,
+        "movieId": 2,
         "title": "Iron man",
         "director": "Robert Dawony JR",
         "year": 2008,
         "reviews":[]
     },
     {
-        "movidId": 3,
+        "movieId": 3,
         "title": "Caption America",
         "director": "Steve Loggers",
         "year": 2011,

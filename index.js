@@ -7,11 +7,29 @@ var movieList = JSON.parse(initialData);
 var app = express()
 const port = process.env.PORT || 3000;
 
-app.get("movies", showMovieList);
+app.get("/movies", showMovieList);
+app.get("/movies/:movieId", showMovieDetail)
 
 app.get("/", (req, res)=>{
     res.send("Hello Node.js")
 })
+
+function showMovieDetail(req, res){
+    var movieId = req.params.movieId;
+    var movie = null;
+    for(let i=0; i<movieList.length; i++){
+        var item = movieList[i];
+        if (item.movieId == movieId){
+            movie = item;
+            break;
+        }
+    }
+    if (!movie){
+        res.status(404).send({msg: "Not Found"})
+        return;
+    }
+    res.send(movie)
+}
 
 function showMovieList(req, res){
     var data = [];
@@ -27,7 +45,6 @@ function showMovieList(req, res){
         data,
     }
     res.send(result)
-    console.log("asdf")
 }
 
 app.listen(3000, ()=>{
