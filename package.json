@@ -1,0 +1,11 @@
+{
+  "name": "node-crud",
+  "version": "1.0.0",
+  "description": "Practice node CRUD",
+  "main": "index.js",
+  "author": "dongwon",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
