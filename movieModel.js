@@ -18,6 +18,12 @@ var MovieSchema = mongoose.Schema({
     reviews: [String]
 });
 
+MovieSchema.methods.addReview = function(review) {
+    this.reviews.push(review);
+    return this.save();
+ }
+ 
+
 var Movie = mongoose.model('Movie', MovieSchema);
 
 module.exports = Movie;

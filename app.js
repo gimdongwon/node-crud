@@ -12,6 +12,6 @@ app.use(handleError);
 app.listen(3000);
 
 function handleError(err, req, res, next){
-    res.status(err.code).send({msg: err.messages});
+    res.status(err.code).send({msg: err.message});
 }
 
